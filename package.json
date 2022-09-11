@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "app": "^0.1.0",
-    "appcenter": "^4.4.5",
+    "appcenter": "4.4.5",
     "appcenter-analytics": "4.4.5",
     "appcenter-crashes": "4.4.5",
     "center": "^0.0.0",
