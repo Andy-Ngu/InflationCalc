@@ -10,7 +10,7 @@ import React from 'react';
 import Crashes from 'appcenter-crashes';
 import Analytics from 'appcenter-analytics';
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
-
+import Config from 'react-native-config';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 export default class App extends React.Component {
@@ -29,6 +29,9 @@ export default class App extends React.Component {
     };
 
     this.checkPreviousSession();
+    console.log(Config);
+    console.log('URL: ' + Config.API_URL);
+    console.log('ENV: ' + Config.ENV);
   }
 
   calculateInflationImpact(value, inflationRate, time) {
@@ -120,6 +123,7 @@ export default class App extends React.Component {
         <Text style={styles.label}>
           A difference of: ${this.state.difference}.
         </Text>
+        <Text style={styles.label}>{Config.API_URL}</Text>
       </View>
     );
   }
